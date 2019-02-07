@@ -1,6 +1,6 @@
 public class GameIO {
 
-    public void printBoard(Board b) {
+    public static void printBoard(Board b) {
         System.out.println();
         for(int i = 0; i < b.getWidth(); i++) {
             System.out.printf(" %s", i);

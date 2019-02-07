@@ -8,7 +8,8 @@ public class test {
     public static void main(String[] args) {
         GameIO game = new GameIO();
         Board board = new Board(9, 9,3);
-        System.out.println();
+        System.out.println(board.isTerminal());
+
         board = board.dropChip(board, 3);
 
 
@@ -21,6 +22,8 @@ public class test {
         board = board.dropChip(board, 3);
         game.printBoard(board);
         board.checkWin();
+        System.out.println(board.isTerminal());
+
     }
 
 }

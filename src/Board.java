@@ -2,14 +2,13 @@
 import java.util.Stack;
 
 public class Board {
-
     // Class Variables
-    private int height;
-    private int width;
-    private int nToWin;
+    private final int height;
+    private final int width;
+    private final int nToWin;
     private Player[][] data;
     private boolean isManTurn = false;
-    private Player currentPlayer = Player.X;
+    public Player currentPlayer = Player.O;
     private Integer[] colScore = {0, 0, 0, 0, 0, 0, 0};
 
     public Board (int width, int height, int nToWin) {
@@ -63,26 +62,20 @@ public class Board {
     }
 
     public Board dropChip(Board b, int column) {
-        int columnToDrop = column - 1; // Regular players are not going to want to count from 0 to n-1
-        currentPlayer = isManTurn ? Player.X : Player.O;
+        int columnToDrop = column; // Regular players are not going to want to count from 0 to n-1
 
-        // Check if invalid move (for stupid humans)
-        if(data[column][0] != Player.E) {
-            System.out.println("Invalid Move Try Again");
-            return b; // Returns the board, but doesn't change who's turn it is
-        }
         for(int ch = 0; ch < b.getHeight(); ch++) {
             if (ch + 1 == b.getHeight()) {
                 b.data[columnToDrop][ch] = currentPlayer;
+                break;
             } else if (b.data[columnToDrop][ch + 1] != Player.E) {
                 b.data[columnToDrop][ch] = currentPlayer;
+                break;
             }
         }
 
-        if(b.checkWin() != Player.E) {
-            System.out.printf("Game over %s wins! \n", currentPlayer);
-        }
         isManTurn = !isManTurn;
+        currentPlayer = isManTurn ? Player.X : Player.O;
 
         return b;
     }
@@ -94,9 +87,17 @@ public class Board {
             return true;
         } else {
             for(int i = 0; i < width; i++) {
-                
+                if(data[i][0] == Player.E) {
+                    return false;
+                }
             }
+            return true;
         }
+    }
+
+    public boolean columnPlayable(int column) {
+
+        return data[column][0] == Player.E; // false means column is full
     }
 
     public Player checkWin() {
