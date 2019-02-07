@@ -7,8 +7,8 @@ public class Board {
     private final int width;
     private final int nToWin;
     private Player[][] data;
-    private boolean isManTurn = false;
-    public Player currentPlayer = Player.O;
+    private boolean isManTurn = true;
+    public Player currentPlayer = Player.X;
     private Integer[] colScore = {0, 0, 0, 0, 0, 0, 0};
 
     public Board (int width, int height, int nToWin) {
