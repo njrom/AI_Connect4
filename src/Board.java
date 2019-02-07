@@ -7,8 +7,14 @@ public class Board {
     private final int width;
     private final int nToWin;
     private Player[][] data;
-    private boolean isManTurn = true;
-    public Player currentPlayer = Player.X;
+
+    public void setManTurn(boolean manTurn) {
+        isManTurn = manTurn;
+        currentPlayer = isManTurn ? Player.X : Player.O;
+    }
+
+    private boolean isManTurn = false;
+    public Player currentPlayer = Player.O;
     private Integer[] colScore = {0, 0, 0, 0, 0, 0, 0};
 
     public Board (int width, int height, int nToWin) {
@@ -30,7 +36,7 @@ public class Board {
         return nToWin;
     }
 
-    public boolean isManTurn() {
+    public boolean getManTurn() {
         return isManTurn;
     }
 
@@ -61,22 +67,19 @@ public class Board {
         return playableColumns;
     }
 
-    public Board dropChip(Board b, int column) {
+    public static Board dropChip(Board b, int column) {
         int columnToDrop = column; // Regular players are not going to want to count from 0 to n-1
 
         for(int ch = 0; ch < b.getHeight(); ch++) {
             if (ch + 1 == b.getHeight()) {
-                b.data[columnToDrop][ch] = currentPlayer;
+                b.data[columnToDrop][ch] = b.currentPlayer;
                 break;
             } else if (b.data[columnToDrop][ch + 1] != Player.E) {
-                b.data[columnToDrop][ch] = currentPlayer;
+                b.data[columnToDrop][ch] = b.currentPlayer;
                 break;
             }
         }
-
-        isManTurn = !isManTurn;
-        currentPlayer = isManTurn ? Player.X : Player.O;
-
+        b.setManTurn(!b.isManTurn);
         return b;
     }
 
@@ -138,6 +141,24 @@ public class Board {
         return Player.E;
     }
 
+    public static Board copyBoard(Board b) {
+        //Loop thru array and copy ints
+        Board newB = new Board(b.getnToWin(),b.getHeight(),b.getWidth());
+        newB.setManTurn(b.getManTurn());
+        for(int h = 0; h < b.getHeight(); h++)
+        {
+            for(int w = 0; w < b.getWidth(); w++)
+            {
+                newB.setDataVal(h, w, b.getData()[h][w]);
+            }
+        }
+        return newB;
+    }
+
+    public void setDataVal(int h, int w, Player e)
+    {
+        data[h][w] = e;
+    }
 
 
 }
