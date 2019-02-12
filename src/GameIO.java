@@ -5,7 +5,7 @@ public class GameIO {
         for(int i = 0; i < b.getWidth(); i++) {
             System.out.printf(" %s", i);
         }
-        System.out.println(" ");
+        System.out.printf("\n");
 
         for(int i = 0; i <b.getHeight(); i++) {
             System.out.printf("|");
@@ -18,7 +18,6 @@ public class GameIO {
         for(int i = 0; i < b.getWidth(); i++) {
             System.out.printf(" %s", i);
         }
-        System.out.println(" ");
-        System.out.println();
+        System.out.printf("\n \n ");
     }
 }
