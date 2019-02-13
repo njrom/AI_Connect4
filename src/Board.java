@@ -321,19 +321,4 @@ public class Board {
         return boardScore;
     }
 
-    public static void main(String[] args) {
-        Board b = new Board(7, 7 , 4);
-        b.initBoard();
-        b.data[3][3] = Player.O;
-        b.data[5][5] = Player.O;
-
-        b.data[3][6] = Player.X;
-        b.data[4][6] = Player.X;
-
-
-        GameIO.printBoard(b);
-
-
-    }
-
 }

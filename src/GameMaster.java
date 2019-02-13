@@ -81,6 +81,8 @@ public class GameMaster {
             System.out.println("Cat's Game! \n It's a tie!");
         }
     }
+
+
     private static boolean getRandomBoolean() {
         return Math.random() < 0.5;
         // I tried another approaches here, still the same result
