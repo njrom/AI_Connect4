@@ -15,13 +15,17 @@ public class GameMaster {
             System.out.println("Invalid Input Try Again");
             choice = s.next();
         }
+        AI ai = new AI_Minimax();
         Board board;
         if(choice.equals("a") || choice.equals("A")) {
             board = new Board(3,3,3);
+            ((AI_Minimax) ai).depth = 25;
+
         } else {
             board = new Board(6,7,4);
+            ((AI_Minimax) ai).depth = 5;
         }
-        AI ai = new AI_Minimax();
+
         boolean playerTurn = getRandomBoolean();
         board.setManTurn(playerTurn);
         if(playerTurn) {
@@ -56,7 +60,7 @@ public class GameMaster {
                     System.out.println("Please enter a valid column number.");
                 }
             } else {
-                System.out.println("The AI is thinking...+-¬");
+                System.out.println("The AI is thinking...");
                 int cdcd = ai.decideTurn(board);
 
                 board = board.dropChip(board, cdcd);

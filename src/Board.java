@@ -16,7 +16,7 @@ public class Board {
     }
 
     private boolean isManTurn = true;
-    public Player currentPlayer = Player.O;
+    public Player currentPlayer;
 
 
     public Board (int width, int height, int nToWin) {
@@ -107,48 +107,20 @@ public class Board {
     }
 
     public Player checkWin() {
-        // TODO: Need to Generalize, currently only works for 3x3x3
-        // TODO: Need to rewrite so that it is continuous, not discrete (-100, 100) means win for AI or Man
-        int boardScore = 0;
-        // Vertical Check
+        // horizontalCheck
         for (int j = 0; j<getHeight()-2 ; j++ ){
-
             for (int i = 0; i<getWidth(); i++){
-                // TODO: Track The number of players in a row, and if we saw an empty space
                 if ((this.data[i][j] == this.data[i][j+1]) && (this.data[i][j+2] == this.data[i][j+1]) && (this.data[i][j] != Player.E)){
                     return this.data[i][j];
                 }
             }
         }
-
-        // Horizontal Check
-        for (int j = 0; j<this.getHeight(); j++) {
-            Player p = null;
-            boolean seenEmpty = false;
-            int streak = 0;
-            for (int i = 0; i<this.getWidth()-2 ; i++ ) {
-
-                // TODO: Need to track same player streak and if we saw a blank yet
-                if (p != null) {
-                    if (p == data[i][j]) {
-                        int sign = (p == Player.O) ? 1 : -1;
-                        streak = streak + 1*sign;
-
-                    } else {
-                        if(seenEmpty || data[i][j] == Player.E) { // if next is empty
-                            // TODO: add weight to boardscore based on what the streak was
-                        }
-                        streak = 0; // Reset streak;
-                    }
+        // verticalCheck
+        for (int i = 0; i<getWidth()-2 ; i++ ){
+            for (int j = 0; j<this.getHeight(); j++) {
+                if ((this.data[i][j] == this.data[i+1][j]) && (this.data[i+2][j] == this.data[i+1][j]) && (this.data[i][j] != Player.E)){
+                    return this.data[i][j] ;
                 }
-                p = data[i][j];
-                seenEmpty = p == Player.E;
-
-
-//
-//                if ((this.data[i][j] == this.data[i+1][j]) && (this.data[i+2][j] == this.data[i+1][j]) && (this.data[i][j] != Player.E)){
-//                    return this.data[i][j] ;
-//                }
             }
         }
         // ascendingDiagonalCheck
@@ -293,10 +265,10 @@ public class Board {
         if(this.width ==3 && this.height == 3) {
             Player p = this.checkWin();
             if(p == Player.O) {
-                boardScore = 1000000000;
+                boardScore = 100000000;
                 return boardScore;
             } else if(p == Player.X ){
-                boardScore = -1000000000;
+                boardScore = -100000000;
                 return boardScore;
             } else {
                 return boardScore;

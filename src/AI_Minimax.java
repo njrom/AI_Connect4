@@ -2,8 +2,7 @@ import java.util.ArrayList;
 
 
 public class AI_Minimax implements AI{
-    static int depthLimit = 1;
-    static int depth = 0;
+    public int depth = 1;
     @Override
     public int decideTurn(Board board) {
 
@@ -14,9 +13,9 @@ public class AI_Minimax implements AI{
             Board cb = Board.copyBoard(board);
             cb = Board.dropChip(cb, pActions.get(i));
             // System.out.printf("Move on %s \n", pActions.get(i));
-            if(maxValue <= minimax(cb, 5, false)) {
+            if(maxValue <= minimax(cb, depth, false)) {
                 // System.out.printf("Max Col now %s \n", pActions.get(i));
-                maxValue = minimax(cb, 5, false); // Bug, if it isn't odd depth it will be the wrong choice
+                maxValue = minimax(cb, depth, false); // Bug, if it isn't odd depth it will be the wrong choice
 
                 maxCol = pActions.get(i);
             }
