@@ -56,6 +56,7 @@ public class GameMaster {
                     System.out.println("Please enter a valid column number.");
                 }
             } else {
+                System.out.println("The AI is thinking...+-¬");
                 int cdcd = ai.decideTurn(board);
 
                 board = board.dropChip(board, cdcd);

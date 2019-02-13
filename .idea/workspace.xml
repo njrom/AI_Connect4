@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="cd002f6f-7ca2-4fd1-b7fb-0c533c57ba7f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project1/AI_Minimax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1/AI_Minimax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project1/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project1/GameMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1/GameMaster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AI_Minimax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AI_Minimax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI_Minimax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameMaster.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,20 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="183">
+              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -128,15 +134,14 @@
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/AI_Minimax.java" />
         <option value="$PROJECT_DIR$/src/Board.java" />
-        <option value="$PROJECT_DIR$/src/GameMaster.java" />
         <option value="$PROJECT_DIR$/src/GameIO.java" />
+        <option value="$PROJECT_DIR$/src/GameMaster.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="480" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="960" />
+    <option name="width" value="1770" />
     <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -168,7 +173,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550013218805" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550016186651" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -237,9 +242,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="480" y="23" width="960" height="1177" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.45315903" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25396827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -248,7 +253,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28479263" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3304813" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3824885" />
@@ -331,13 +336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -383,17 +381,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameMaster.java">
+    <entry file="file://$PROJECT_DIR$/src/GameIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="187">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameIO.java">
+    <entry file="file://$PROJECT_DIR$/src/GameMaster.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="170">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
         </state>
       </provider>
     </entry>
